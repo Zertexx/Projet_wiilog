@@ -1,0 +1,17 @@
+.nav-link{
+    color: whitesmoke;
+    transition: 0.5s;
+}
+.nav-link:hover{
+    background: lightgrey;
+    color: black;
+}
+i{
+    color: #282138;
+    transition: 0.2s;
+    margin: 5px;
+}
+
+i:hover{
+    color: red;
+}

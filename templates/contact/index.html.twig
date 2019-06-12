@@ -3,9 +3,9 @@
 {% block title %}Contact index{% endblock %}
 
 {% block body %}
-    <h1>Contact index</h1>
+    <h1 class="p-3">Liste des Contacts</h1>
 
-    <table class="table">
+    <table class="table table-striped table-bordered ">
         <thead>
             <tr>
                 <th>Id</th>
@@ -23,8 +23,11 @@
                 <td>{{ contact.email }}</td>
                 <td>{{ contact.enterprise }}</td>
                 <td>
-                    <a href="{{ path('contact_show', {'id': contact.id}) }}">show</a>
-                    <a href="{{ path('contact_edit', {'id': contact.id}) }}">edit</a>
+                    <a href="{{ path('contact_show', {'id': contact.id}) }}"><i class="fa fa-eye"></i>
+                    </a>
+
+                    <a href="{{ path('contact_edit', {'id': contact.id}) }}"><i class="fa fa-pencil"></i>
+                    </a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +38,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('contact_new') }}">Create new</a>
+    <a class="btn btn-secondary" href="{{ path('contact_new') }}">Ajouter un contact</a>
 {% endblock %}
