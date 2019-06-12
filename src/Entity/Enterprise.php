@@ -33,6 +33,11 @@ class Enterprise
      */
     private $contacts;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Type", inversedBy="enterprise")
+     */
+    private $type;
+
     public function __construct()
     {
         $this->contacts = new ArrayCollection();
@@ -101,5 +106,17 @@ class Enterprise
     public function __toString()
     {
         return $this->name;
+    }
+
+    public function getType(): ?Type
+    {
+        return $this->type;
+    }
+
+    public function setType(?Type $type): self
+    {
+        $this->type = $type;
+
+        return $this;
     }
 }
