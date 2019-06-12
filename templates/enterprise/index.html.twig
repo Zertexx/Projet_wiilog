@@ -3,7 +3,7 @@
 {% block title %}Enterprise index{% endblock %}
 
 {% block body %}
-    <h1 class="p-3">Liste des Entreprises</h1>
+    <h1 class=" jumbotron p-3">Liste des Entreprises</h1>
 
     <table class="table table-striped table-bordered ">
 
@@ -22,6 +22,9 @@
                 <td>{{ enterprise.id }}</td>
                 <td>{{ enterprise.name }}</td>
                 <td>{{ enterprise.email }}</td>
+                {% for contacts in enterprise.contacts %}
+                <td>{{ contacts.name }}</td>
+                {%  endfor %}
                 <td>
                     <a href="{{ path('enterprise_show', {'id': enterprise.id}) }}"><i class="fa fa-eye"></i></a>
                     <a href="{{ path('enterprise_edit', {'id': enterprise.id}) }}"><i class="fa fa-pencil"></i></a>

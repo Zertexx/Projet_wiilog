@@ -3,7 +3,8 @@
 {% block title %}Edit Enterprise{% endblock %}
 
 {% block body %}
-    <h1>Edit Enterprise</h1>
+
+    <h1 class=" jumbotron p-3">Edition de l'entreprise : {{ enterprise.name }}</h1>
 
     {{ include('enterprise/_form.html.twig', {'button_label': 'Update'}) }}
 
