@@ -1,4 +1,11 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn btn-secondary">{{ button_label|default('Save') }}</button>
+
+{{ form_row(form.name, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_row(form.email, { 'attr': {'class': 'form-control'} }) }}
+
+    {{ form_row(form.contacts, { 'attr': {'class': 'form-control'}, 'name': 'Contact' }) }}
+    {{ form_row(form.type, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_row(form.french, { 'attr': {'class': 'form-control'}, 'name': 'Francaise' }) }}
+
+<button class="btn btn-secondary">{{ button_label|default('Editer') }}</button>
 {{ form_end(form) }}

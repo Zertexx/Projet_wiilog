@@ -6,9 +6,7 @@
 
     <h1 class=" jumbotron p-3">Edition de l'entreprise : {{ enterprise.name }}</h1>
 
-    {{ include('enterprise/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('enterprise/_form.html.twig', {'button_label': 'Editer'}) }}
+    <a class="btn btn-secondary" href="{{ path('enterprise_index') }}">Retour</a>
 
-    <a class="btn btn-secondary" href="{{ path('enterprise_index') }}">back to list</a>
-
-    {{ include('enterprise/_delete_form.html.twig') }}
 {% endblock %}

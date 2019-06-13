@@ -35,8 +35,14 @@ class Enterprise
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Type", inversedBy="enterprise")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $type;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $french;
 
     public function __construct()
     {
@@ -116,6 +122,18 @@ class Enterprise
     public function setType(?Type $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getFrench(): ?bool
+    {
+        return $this->french;
+    }
+
+    public function setFrench(bool $french): self
+    {
+        $this->french = $french;
 
         return $this;
     }

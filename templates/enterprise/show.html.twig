@@ -13,7 +13,7 @@
                 <td>{{ enterprise.id }}</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th>Nom</th>
                 <td>{{ enterprise.name }}</td>
             </tr>
             <tr>
@@ -25,9 +25,8 @@
     </table>
 
 
-    <a class="btn btn-secondary" href="{{ path('enterprise_edit', {'id': enterprise.id}) }}">edit</a>
+    <a class="btn btn-secondary" href="{{ path('enterprise_edit', {'id': enterprise.id}) }}">Editer</a>
     <a class="btn btn-secondary" href="{{ path('enterprise_index') }}">Retour</a>
 
 
-    {{ include('enterprise/_delete_form.html.twig') }}
 {% endblock %}
