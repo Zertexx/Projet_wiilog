@@ -3,10 +3,12 @@
 {% block title %}Edit Contact{% endblock %}
 
 {% block body %}
-    <h1 class=" jumbotron p-3">Edition du contact : {{ contact.name }}</h1>
-
+    <h1 class=" jumbotron p-3">{{ contact.name }}</h1>
     {{ include('contact/_form.html.twig', {'button_label': 'Editer'}) }}
+    <a class="btn btn-secondary mt-2" href="{{ path('contact_index') }}">Retour</a>
 
-    <a class="btn btn-secondary" href="{{ path('contact_index') }}">Retour</a>
+
+
+
 
 {% endblock %}

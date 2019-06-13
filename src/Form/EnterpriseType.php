@@ -2,11 +2,14 @@
 
 namespace App\Form;
 
+use App\Entity\Contact;
 use App\Entity\Enterprise;
 use App\Entity\Type;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -21,7 +24,14 @@ class EnterpriseType extends AbstractType
                 'label' => 'Nom'])
 
             ->add('email')
-            ->add('contacts')
+            ->add('contacts', EntityType::class, [
+                'class'  => Contact::class,
+                'choice_label' => 'name',
+                'expanded' => true,
+                'multiple' => true,
+                'by_reference' => false
+            ])
+
             ->add('type', EntityType::class, [
                 'class'  => Type::class,
                     'choice_label' => 'name'])

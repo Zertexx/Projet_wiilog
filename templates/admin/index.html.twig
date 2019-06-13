@@ -2,8 +2,17 @@
 
 {% block title %}Hello AdminController!{% endblock %}
 {% block body %}
+    <div class="jumbotron text-center"><h1>Bienvenue dans l'espace Administrateur</h1>
+    </div>
+    <div class="container gestion d-flex text-center">
 
-<h1>Bienvenue sur l'admin controller</h1>
 
+            <div class="entreprise"><a href="{{ path('enterprise_index') }}"><h2>Gestion des Entreprises</h2> </a></div>
+
+
+
+            <div class="contact"><a href="{{ path('contact_index') }}"><h2>Gestion des Contacts</h2></a></div>
+
+    </div>
 {% endblock %}
 

@@ -13,5 +13,75 @@ i{
 }
 
 i:hover{
-    color: red;
+    color: white;
+}
+
+.linkedin{
+    margin-right: 50px;
+}
+
+.fa-linkedin{
+    color:white;
+}
+
+
+.gestion{
+    justify-content: center;
+
+}
+.entreprise{
+    width: 250px;
+    height: 250px;
+    padding: 5%;
+    margin: 5%;
+    background:#343a40;
+    transition: 0.3s;
+}
+.entreprise a{
+    color: white;
+}
+.entreprise a:hover{
+    color: #343a40;
+}
+
+.contact{
+    width: 250px;
+    height: 250px;
+    background:#e9ecef;
+    padding: 5%;
+    margin: 5%;
+    transition: 0.3s;
+
+}
+.contact a{
+    color: #343a40;
+
+}.contact a:hover{
+    color: #e9ecef;
+
+}
+
+.entreprise:hover{
+    width: 250px;
+    height: 250px;
+    background:#e9ecef;
+    color: #343a40;
+    padding: 5%;
+    margin: 6%;
+
+}
+
+.contact:hover{
+    width: 250px;
+    height: 250px;
+    background:#343a40;
+    color: #e9ecef;
+    padding: 5%;
+    margin: 6%;
+
+}
+
+a{
+    text-decoration: none;
+
 }

@@ -3,10 +3,12 @@
 {% block title %}Enterprise{% endblock %}
 
 {% block body %}
-    <h1 class="p-3 jumbotron">Enterprise : {{ enterprise.name }}</h1>
+    <h1 class="p-3 jumbotron">{{ enterprise.name }}</h1>
 
-    <table class="table table-bordered ">
+    <a class="btn btn-secondary mb-2" href="{{ path('enterprise_edit', {'id': enterprise.id}) }}">Editer</a>
+    <a class="btn btn-secondary mb-2" href="{{ path('enterprise_index') }}">Retour</a>
 
+    <table class="table table-striped table-bordered ">
     <tbody>
             <tr>
                 <th>Id</th>
@@ -20,13 +22,35 @@
                 <th>Email</th>
                 <td>{{ enterprise.email }}</td>
             </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ enterprise.type }}</td>
+            </tr>
+            <tr>
+                <th>Française</th>
+                {% if enterprise.french == 1 %}
+                    <td>Oui</td>
+                {% else %}
+                    <td>Non</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <th>Contacts</th>
+                <td>
+                    <div class="dropdown show">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liste
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                            {% for contacts in enterprise.contacts %}
+
+                                <a class="dropdown-item" href="{{ path('contact_show', {'id': contacts.id}) }}">{{ contacts.name }}</a>
+
+                            {%  endfor %}
+                        </div>
+                    </div>
+                </td>
         </tbody>
-
     </table>
-
-
-    <a class="btn btn-secondary" href="{{ path('enterprise_edit', {'id': enterprise.id}) }}">Editer</a>
-    <a class="btn btn-secondary" href="{{ path('enterprise_index') }}">Retour</a>
-
 
 {% endblock %}

@@ -6,6 +6,5 @@
     {{ form_row(form.contacts, { 'attr': {'class': 'form-control'}, 'name': 'Contact' }) }}
     {{ form_row(form.type, { 'attr': {'class': 'form-control'} }) }}
     {{ form_row(form.french, { 'attr': {'class': 'form-control'}, 'name': 'Francaise' }) }}
-
-<button class="btn btn-secondary">{{ button_label|default('Editer') }}</button>
+<button class="btn btn-secondary mt-2">{{ button_label|default('Ajouter') }}</button>
 {{ form_end(form) }}

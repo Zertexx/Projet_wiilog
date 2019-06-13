@@ -28,7 +28,7 @@ class Contact
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Enterprise", inversedBy="contacts")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
 
      */
     private $enterprise;

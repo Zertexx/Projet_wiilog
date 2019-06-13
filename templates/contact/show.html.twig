@@ -3,7 +3,10 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-    <h1 class="p-3 jumbotron">Contact : {{ contact.name }}</h1>
+    <h1 class="p-3 jumbotron">{{ contact.name }}</h1>
+
+    <a class="btn btn-secondary mb-2" href="{{ path('contact_edit', {'id': contact.id}) }}">Editer</a>
+    <a class="btn btn-secondary mb-2" href="{{ path('contact_index') }}">Retour</a>
 
     <table class="table table-striped table-bordered ">
         <tbody>
@@ -25,10 +28,5 @@
             </tr>
         </tbody>
     </table>
-
-    <a class="btn btn-secondary" href="{{ path('contact_edit', {'id': contact.id}) }}">Editer</a>
-
-    <a class="btn btn-secondary" href="{{ path('contact_index') }}">Retour</a>
-
 
 {% endblock %}

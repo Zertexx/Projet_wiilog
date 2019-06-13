@@ -3,5 +3,6 @@
     {{ form_row(form.name, { 'attr': {'class': 'form-control'}, 'name': 'Nom du contact' }) }}
     {{ form_row(form.email, { 'attr': {'class': 'form-control'} }) }}
     {{ form_row(form.enterprise, { 'attr': {'class': 'form-control'}, 'name': 'Entreprise' }) }}
-    <button class="btn btn-secondary">{{ button_label|default('Editer') }}</button>
+<button class="btn btn-secondary mt-2">{{ button_label|default('Ajouter') }}</button>
+
 {{ form_end(form) }}

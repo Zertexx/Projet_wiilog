@@ -1,12 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Enterprise{% endblock %}
+{% block title %}Edition de l'enterprise{% endblock %}
 
 {% block body %}
 
-    <h1 class=" jumbotron p-3">Edition de l'entreprise : {{ enterprise.name }}</h1>
+    <h1 class=" jumbotron p-3">{{ enterprise.name }}</h1>
 
-    {{ include('enterprise/_form.html.twig', {'button_label': 'Editer'}) }}
-    <a class="btn btn-secondary" href="{{ path('enterprise_index') }}">Retour</a>
+    {{ include('enterprise/_form.html.twig', {'button_label': 'Ajouter'}) }}
+
+
+    <a class="btn btn-secondary mt-2" href="{{ path('enterprise_index') }}">Retour</a>
 
 {% endblock %}

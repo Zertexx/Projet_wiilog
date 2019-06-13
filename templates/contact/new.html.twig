@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Contact{% endblock %}
+{% block title %}Ajouter un Contact{% endblock %}
 
 {% block body %}
-    <h1>Créer un nouveau Contact</h1>
+    <h1>Ajouter un Contact</h1>
 
-    {{ include('contact/_form.html.twig') }}
+    {{ include('contact/_form.html.twig', {'button_label': 'Ajouter'}) }}
 
-    <a class="btn btn-secondary" href="{{ path('contact_index') }}">Retour</a>
+    <a class="btn btn-secondary mt-2" href="{{ path('contact_index') }}">Retour</a>
+
+
+
+
 {% endblock %}

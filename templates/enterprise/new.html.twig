@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Enterprise{% endblock %}
+{% block title %}Nouvelle Entreprise{% endblock %}
 
 {% block body %}
-    <h1>Create new Enterprise</h1>
+    <h1>Ajouter une Entreprise</h1>
 
-    {{ include('enterprise/_form.html.twig') }}
+    {{ include('enterprise/_form.html.twig', {'button_label': 'Ajouter'}) }}
 
-    <a class="btn btn-secondary" href="{{ path('enterprise_index') }}">back to list</a>
+
+    <a class="btn btn-secondary mt-2" href="{{ path('enterprise_index') }}">Retour</a>
+
 {% endblock %}
